@@ -13,7 +13,7 @@ var creepspawn = {
             var body = [];
                 if (roles[i] == 'Harvester'){
                     body = [MOVE, CARRY];
-                    for (a = 0; a < Math.floor(Game.spawns['Spawn1'].room.energyAvailable / 200); a++) {
+                    for (a = 0; a < Math.floor((Game.spawns['Spawn1'].room.energyAvailable - 100) / 150); a++) {
                         body.push(WORK,MOVE)
                     }
                 } else if (roles[i] =='Carry') {
